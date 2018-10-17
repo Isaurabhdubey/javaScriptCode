@@ -1,0 +1,44 @@
+<div class="form-group">
+  <label class="col-sm-3 control-label">Date Of Birth</label>
+    <div class="col-sm-5">
+      <p class="input-group">
+        <input type="text" name="dob" class="form-control" placeholder="Date of Birth" ng-click="vm.checkDobDatepickerOpen($event)" datepicker-popup="dd-MM-yyyy" data-ng-model="vm.userInfo.dateOfBirth" is-open="vm.dateofbirthOpened" min-date="vm.minDate" required datepicker-options="vm.dateOptions" close-text="Close" ng-change="vm.getEndDate();" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-sm btn-default" ng-click="vm.checkDobDatepickerOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+           </span>
+       </p>
+       <span class="error-form-fields pull-right" ng-show="createUserForm.dob.$error.required && createUserForm.dob.$touched">
+                       Select Date of Birth</span>
+    </div>
+</div>
+
+
+
+
+function checkDobDatepickerOpen($event) {
+     $event.preventDefault();
+     $event.stopPropagation();
+     vm.dateofbirthOpened = true;
+   }
+
+
+
+
+
+
+
+
+Number Validation: “/^\d+$/”
+Name Validation: “/^[a-zA-Z0-9\-\s]*$/”
+Email Validation : “/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-zA-Z]{2,6}(?:\.[a-zA-Z]{2})?)$/”
+
+Name:
+<span class="error-form-fields pull-right" ng-show="tenantForm.name.$error.pattern && tenantForm.name.$dirty">Enter a valid Name!</span>
+<span class="error-form-fields pull-right" ng-show="tenantForm.name.$error.required && tenantForm.name.$touched">Enter Name!</span>
+
+
+<div class="tile-footer dvd dvd-top text-right">
+   <button ng-class="tenantForm.$invalid==true?'btn btn-light':'btn btn-primary'" ng-disabled="tenantForm.$invalid" ng-hide="vm.isEdit" ng-click="vm.createClient(vm.tenantInfo)">Save</button>
+</div>
+
+
