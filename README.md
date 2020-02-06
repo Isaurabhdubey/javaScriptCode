@@ -1,1 +1,3 @@
-# javaScriptCode
+## JavaScriptCode
+---
+### Javascript and Typescript code
