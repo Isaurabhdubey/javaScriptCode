@@ -1,4 +1,4 @@
-class SortAndSquare { 
+class SquareAndSort { 
     data: number[];
     left = 0;
     right = 0;
@@ -23,5 +23,5 @@ class SortAndSquare {
     
 }
 
-let sortAndSquareObj = new SortAndSquare([-7,-1, 2, 4, 8])
+let sortAndSquareObj = new SquareAndSort([-7,-1, 2, 4, 8])
 console.log(sortAndSquareObj.squaringAndSoring());
