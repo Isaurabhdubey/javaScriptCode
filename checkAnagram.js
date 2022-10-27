@@ -12,4 +12,28 @@ function checkAnagram(str, str2){
   }
 }
 
+/*
+* thinking about time complexity
+*/
+
+function checkAnagramWithTimeComplexity(str1, str2) {
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+    if (str1.length !== str2.length) return false
+    let counting = {}
+    for (let c of str1) {
+        counting[c] = (counting[c] + 1) || 1;
+    }
+    for (let c of str2) {
+        if (counting[c]) {
+            --counting[c];
+        }
+        else {
+            return false;
+        }
+    }
+    return true;
+};
+
 checkAnagram('Aabdcdd','aAdbdcd');
+checkAnagramWithTimeComplexity('Aabdcdd','aAdbdcd');
