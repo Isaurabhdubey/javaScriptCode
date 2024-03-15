@@ -1,0 +1,27 @@
+{
+  "name": "javascriptcode",
+  "version": "1.0.0",
+  "description": "javascript and typescript practice code",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Isaurabhdubey/javaScriptCode.git"
+  },
+  "author": "saurabhgolu035@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Isaurabhdubey/javaScriptCode/issues"
+  },
+  "homepage": "https://github.com/Isaurabhdubey/javaScriptCode#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
